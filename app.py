@@ -3,7 +3,7 @@ import discord
 import re
 from rr import RussianRoulette
 
-TOKEN = 'NDQzNjM4ODUyNDE0ODY1NDE5.DdQVgA.Gw0lk69aKjCLmn85K8JVXegL_Lk'
+TOKEN = ''
 
 client = discord.Client()
 delimiter = '$'
@@ -66,7 +66,7 @@ async def on_message(message):
                     rr = None
                     await client.send_message(
                         message.channel,
-                        f'BANG!'
+                        f'BANG! {message.author} has been kicked from the server'
                     )
                     await client.kick(
                         message.author
